@@ -1,0 +1,33 @@
+
+This is the trivial enclosing meta-project to assemble libbk, libclc,
+and bkmk under one umbrella with the necessary glue to allow
+everything to compile and be checked out.
+
+In order to trivially check out everything, please download and
+install gitslave, found at http://gitslave.sf.net
+
+After doing so, run:
+
+----------------------------------------------------------------------
+GITSLAVE=.gitslave-ro gits clone git://github.com/SethRobertson/meta-baka.git meta-baka
+
+cd meta-baka
+make install
+----------------------------------------------------------------------
+
+If you don't want to use gitslave, then you need to run the following
+commands:
+
+----------------------------------------------------------------------
+git clone git://github.com/SethRobertson/meta-baka.git
+cd meta-baka
+git clone git://github.com/SethRobertson/bkmk.git
+git clone git://github.com/SethRobertson/libbk.git
+git clone git://github.com/SethRobertson/libclc.git
+make install
+----------------------------------------------------------------------
+
+Don't worry, it will only install into the INSTALL directory absent
+modifications to the Make* files.
+
+                                        -Seth Robertson
