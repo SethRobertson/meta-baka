@@ -14,3 +14,7 @@
 #
 # BAKA package meta Make.include
 #
+BK_INSTALLPREFIX:=$(GROUPTOP)/$(PKGTOP)/INSTALL
+BK_INSTALLBASE:=$(BK_INSTALLPREFIX)/usr/local
+BK_EXTERNAL_RPATH=-R /usr/local/lib
+BK_ONE_PASS_INSTALL=true
